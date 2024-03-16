@@ -27,7 +27,7 @@ function App() {
               return <button onClick={() => handleButtonClick(buttonNumber)} key={buttonNumber} className={`one rounded-[50%] ${buttonNumber===selectedButton?"bg-[#7E8A9A] text-white":"bg-[#262F38]"} w-fit p-3 px-5 hover:bg-white hover:text-[#FC7613]`}>{buttonNumber}</button>
               })}
             </div>
-            <button onClick={() => setThankYou(thankYou = true)} type="submit" className='bg-[#FC7613] w-full rounded-full py-2 text-white hover:bg-white hover:text-[#FC7613]'>SUBMIT</button>
+            <button disabled={selectedButton===null} onClick={() => setThankYou(thankYou = true)} type="submit" className='bg-[#FC7613] w-full rounded-full py-2 text-white hover:bg-white hover:text-[#FC7613]'>SUBMIT</button>
           </div>
         </div>
       </div>)}
