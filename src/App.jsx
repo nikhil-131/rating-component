@@ -1,4 +1,6 @@
 import { useState } from 'react'
+import star from "./assets/images/star.svg"
+import final from "./assets/images/final.svg"
 
 function App() {
   const [selectedButton, setSelectedButton] = useState(null)
@@ -13,7 +15,7 @@ function App() {
       {((!thankYou) && <div className="container rounded-3xl w-96 h-96 absolute bg-gradient-to-b from-[#242834] to-[#171E28] top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
         <div className="main my-8 mx-6">
           <div className="logo rounded-full bg-[#262F38] w-fit p-3">
-            <img src="./src/assets/images/star.svg" alt="star icon" />
+            <img src={star} alt="star icon" />
           </div>
           <div className="content">
             <h1 className='text-white text-2xl mt-6 font-bold'>How did we do?</h1>
@@ -33,7 +35,7 @@ function App() {
       {thankYou && <div className="thankContainer rounded-3xl w-96 h-96 absolute bg-gradient-to-b from-[#242834] to-[#171E28] top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
         <div className="thankMain flex flex-col my-8 mx-6 justify-center">
               <div className="thankImage flex justify-center">
-              <img src="./src/assets/images/final.svg" alt="thank you" />
+              <img src={final} alt="thank you" />
               </div>
               <div className="thankContent text-center">
                 <p className='mx-auto my-8 px-4 py-1 bg-[#273039] text-[#FE7612] w-fit rounded-full text-sm'>You selected {selectedButton} out of 5</p>
